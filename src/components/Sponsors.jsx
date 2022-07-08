@@ -16,11 +16,11 @@ export function Sponsors() {
       className="py-20 sm:py-32"
     >
       <h2 id="sponsors-title" className="sr-only">
-        Sponsors
+        Patrocinadores
       </h2>
       <Container>
-        <p className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-blue-900 sm:text-5xl">
-          Current sponsorships for our workshops and speakers.
+        <p className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-green-900 sm:text-5xl">
+          Patrocinadores atuais
         </p>
         <ul className="mt-20 flex flex-col items-center justify-center space-y-12 sm:flex-row sm:space-x-12 sm:space-y-0 md:flex-col md:space-x-0 md:space-y-12">
           <li>
