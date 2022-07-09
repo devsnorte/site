@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+
 
 import { Container } from '@/components/Container'
 import logoAppsignal from '@/images/logos/appsignal.svg'
@@ -48,12 +50,16 @@ export function Sponsors() {
             <ul className="flex flex-col items-center space-y-12 sm:space-y-12 md:flex-row md:space-y-0 md:space-x-16 lg:space-x-32">
               {sponsors.map((sponsor) => (
                 <li className="flex" key={sponsor.name}>
-                  <Image
-                    width={130}
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    layout="fixed"
-                  />
+                  <Link href={sponsor.url}>
+                    <a target="_blank">
+                      <Image
+                        width={130}
+                        src={sponsor.image}
+                        alt={sponsor.name}
+                        layout="fixed"
+                      />
+                    </a>
+                  </Link>
                 </li>
               )).sort((a, b) => a.name > b.name ? 1 : -1)}
             </ul>
