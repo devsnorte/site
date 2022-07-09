@@ -1,12 +1,27 @@
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import logoLaravel from '@/images/logos/laravel.svg'
-import logoMirage from '@/images/logos/mirage.svg'
-import logoStatamic from '@/images/logos/statamic.svg'
-import logoStaticKit from '@/images/logos/statickit.svg'
-import logoTransistor from '@/images/logos/transistor.svg'
-import logoTuple from '@/images/logos/tuple.svg'
+import logoAppsignal from '@/images/logos/appsignal.svg'
+import logoDevpleno from '@/images/logos/devpleno.svg'
+import logoJobsity from '@/images/logos/jobsity.svg'
+
+const sponsors = [
+  {
+    name: 'AppSignal',
+    image: logoAppsignal,
+    url: 'https://www.appsignal.com/'
+  },
+  {
+    name: 'Devpleno',
+    image: logoDevpleno,
+    url: 'https://devpleno.com/'
+  },
+  {
+    name: 'Jobsity',
+    image: logoJobsity,
+    url: 'https://www.jobsity.com/'
+  },
+]
 
 export function Sponsors() {
   return (
@@ -25,53 +40,16 @@ export function Sponsors() {
         <ul className="mt-20 flex flex-col items-center justify-center space-y-12 sm:flex-row sm:space-x-12 sm:space-y-0 md:flex-col md:space-x-0 md:space-y-12">
           <li>
             <ul className="flex flex-col items-center space-y-12 sm:space-y-12 md:flex-row md:space-y-0 md:space-x-16 lg:space-x-32">
-              <li className="flex">
-                <Image
-                  src={logoTransistor}
-                  alt="Transistor"
-                  layout="fixed"
-                  unoptimized
-                />
-              </li>
-              <li className="flex">
-                <Image src={logoTuple} alt="Tuple" layout="fixed" unoptimized />
-              </li>
-              <li className="flex">
-                <Image
-                  src={logoStaticKit}
-                  alt="StaticKit"
-                  layout="fixed"
-                  unoptimized
-                />
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul className="flex flex-col items-center space-y-12 sm:space-y-12 md:flex-row md:space-y-0 md:space-x-16 lg:space-x-32">
-              <li className="flex">
-                <Image
-                  src={logoMirage}
-                  alt="Mirage"
-                  layout="fixed"
-                  unoptimized
-                />
-              </li>
-              <li className="flex">
-                <Image
-                  src={logoLaravel}
-                  alt="Laravel"
-                  layout="fixed"
-                  unoptimized
-                />
-              </li>
-              <li className="flex">
-                <Image
-                  src={logoStatamic}
-                  alt="Statamic"
-                  layout="fixed"
-                  unoptimized
-                />
-              </li>
+              {sponsors.map((sponsor) => (
+                <li className="flex" key={sponsor.name}>
+                  <Image
+                    width={130}
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    layout="fixed"
+                  />
+                </li>
+              ))}
             </ul>
           </li>
         </ul>
