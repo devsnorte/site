@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-import { ButtonLink, SocialFollow } from '@/components/Button'
+import { ButtonLink } from '@/components/Button'
+import { SocialFollow } from '@/components/SocialFollow'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background.jpg'
 
