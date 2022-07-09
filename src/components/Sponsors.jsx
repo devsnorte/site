@@ -4,22 +4,28 @@ import { Container } from '@/components/Container'
 import logoAppsignal from '@/images/logos/appsignal.svg'
 import logoDevpleno from '@/images/logos/devpleno.svg'
 import logoJobsity from '@/images/logos/jobsity.svg'
+import logoIdopter from '@/images/logos/idopter.svg'
 
 const sponsors = [
-  {
-    name: 'AppSignal',
-    image: logoAppsignal,
-    url: 'https://www.appsignal.com/'
-  },
   {
     name: 'Devpleno',
     image: logoDevpleno,
     url: 'https://devpleno.com/'
   },
   {
+    name: 'Idopter Labs',
+    image: logoIdopter,
+    url: 'https://www.idopterlabs.com.br/'
+  },
+  {
     name: 'Jobsity',
     image: logoJobsity,
     url: 'https://www.jobsity.com/'
+  },
+  {
+    name: 'AppSignal',
+    image: logoAppsignal,
+    url: 'https://www.appsignal.com/'
   },
 ]
 
@@ -49,7 +55,7 @@ export function Sponsors() {
                     layout="fixed"
                   />
                 </li>
-              ))}
+              )).sort((a, b) => a.name > b.name ? 1 : -1)}
             </ul>
           </li>
         </ul>
