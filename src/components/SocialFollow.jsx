@@ -53,22 +53,25 @@ const social = [
     ],
   ]
 
-export function SocialFollow() {
+export function SocialFollow({ ...props }) {
     return (
-      <div className="mt-10 gap-x-6 gap-y-8 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8">
-        {social.map(([img, url, alt]) => (
-          <Link key={alt} href={url}>
-            <a target="_blank" className="mx-auto">
-              <Image
-                width={40}
-                height={40}
-                src={img}
-                alt={alt}
-                layout="fixed"
-              />
-            </a>
-          </Link>
-        ))}
+      <div>
+        <p className="mt-6 mb-3 font-display text-lg text-slate-500 md:text-right">Siga nossas redes sociais</p>
+        <div {...props}>
+          {social.map(([img, url, alt]) => (
+            <Link key={alt} href={url}>
+              <a target="_blank" className="inline-flex justify-center rounded-lg p-2 m-auto bg-gray-300">
+                <Image
+                  width={25}
+                  height={25}
+                  src={img}
+                  alt={alt}
+                  layout="fixed"
+                />
+              </a>
+            </Link>
+          ))}
+        </div>
       </div>
     )
   }

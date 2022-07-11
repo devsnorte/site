@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 import { ButtonLink } from '@/components/Button'
-import { SocialFollow } from '@/components/SocialFollow'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background.jpg'
 
@@ -36,15 +35,14 @@ export function Hero() {
             Reunimos pessoas desenvolvedoras e interessadas na área para auxiliar no crescimento profissional, conectar com as iniciativas e projetos de tecnologia que acontecem na região, no país e no mundo.
             </p>
           </div>
-          <ButtonLink href="#" className="mt-10 w-full sm:hidden">
-            Get your tickets
+          <ButtonLink href="https://www.sympla.com.br/produtor/devsnorte" className="mt-10 w-full sm:hidden">
+            Fique por dentro dos Eventos
           </ButtonLink>
           <div className="mt-10 text-xl text-center text-green-900 font-light">
             <p>
-              Siga as nossas redes sociais
+              Faça parte da nossa comunidade!
             </p>
           </div>
-          <SocialFollow></SocialFollow>
         </div>
       </Container>
     </div>
