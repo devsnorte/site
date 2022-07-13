@@ -3,11 +3,52 @@ import Image from 'next/image'
 import { ButtonLink } from '@/components/Button'
 import { SocialFollow } from '@/components/SocialFollow'
 import { Container } from '@/components/Container'
+
 import backgroundImage from '@/images/background.jpg'
+
+import logoYoutube from '@/images/icons/youtube.svg'
+import logoLinkedin from '@/images/icons/linkedin.svg'
+import logoTwitter from '@/images/icons/twitter.svg'
+import logoTelegram from '@/images/icons/telegram.svg'
+import logoInstagram from '@/images/icons/instagram.svg'
+
+
+const social = [
+  [
+    logoLinkedin,
+    'https://www.linkedin.com/company/devsnorte',
+    'DevsNorte LinkedIn',
+    '1.3k'
+  ],
+  [
+    logoInstagram,
+    'https://www.instagram.com/devsnorte/',
+    'DevsNorte Instagram',
+    793
+  ],
+  [
+    logoYoutube,
+    'https://youtube.com/c/DevsNorte',
+    'DevsNorte YouTube',
+    637
+  ],
+  [
+    logoTelegram,
+    'https://t.me/devsnorte',
+    'DevsNorte Telegram',
+    425
+  ],
+  [
+    logoTwitter,
+    'https://www.twitter.com/devsnorte/',
+    'DevsNorte Twitter',
+    227
+  ],
+]
 
 export function Hero() {
   return (
-    <div className="relative pt-10 pb-20 sm:py-24">
+    <div className="relative py-10 sm:py-14">
       <div className="absolute -inset-x-0 -top-48 -bottom-14 overflow-hidden bg-indigo-50">
         <div className="absolute top-0 left-0 -translate-y-[10%] -translate-x-[55%] -scale-x-100 sm:left-1/2 sm:-translate-y-[6%] sm:-translate-x-[98%] lg:-translate-x-[106%] xl:-translate-x-[122%]">
           <Image
@@ -33,18 +74,18 @@ export function Hero() {
               Comunidade de tecnologia que realiza encontros presenciais e online para divulgação de novas tecnologias, padrões de projetos, startups, e todo tipo de inovação no mundo de TI.
             </p>
             <p>
-            Reunimos pessoas desenvolvedoras e interessadas na área para auxiliar no crescimento profissional, conectar com as iniciativas e projetos de tecnologia que acontecem na região, no país e no mundo.
+              Reunimos pessoas desenvolvedoras e interessadas na área para auxiliar no crescimento profissional, conectar com as iniciativas e projetos de tecnologia que acontecem na região, no país e no mundo.
             </p>
           </div>
-          <ButtonLink href="#" className="mt-10 w-full sm:hidden">
-            Get your tickets
+          <ButtonLink href="https://www.sympla.com.br/produtor/devsnorte" className="mt-10 w-full sm:hidden">
+            Fique por dentro dos Eventos
           </ButtonLink>
-          <div className="mt-10 text-xl text-center text-green-900 font-light">
+          <div className="pt-12 text-xl text-center text-green-900 font-light">
             <p>
-              Siga as nossas redes sociais
+              Faça parte da nossa comunidade!
             </p>
+            <SocialFollow social={social} className="pt-8 flex flex-col col-span-2 items-center justify-center space-y-6 md:flex-row md:space-y-0 md:space-x-4"></SocialFollow>
           </div>
-          <SocialFollow></SocialFollow>
         </div>
       </Container>
     </div>
