@@ -18,7 +18,7 @@ const social = [
     logoLinkedin,
     'https://www.linkedin.com/company/devsnorte',
     'DevsNorte LinkedIn',
-    '1.3k'
+    1278
   ],
   [
     logoInstagram,
