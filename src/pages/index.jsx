@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>DevsNorte</title>
+        <title>DevsNorte - A maior comunidade do norte do Brasil</title>
         <meta
           name="description"
           content="Comunidade de desenvolvedores do norte do Brasil. 🖥️💻🚀"
