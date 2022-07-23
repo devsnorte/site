@@ -18,31 +18,31 @@ const social = [
     logoLinkedin,
     'https://www.linkedin.com/company/devsnorte',
     'DevsNorte LinkedIn',
-    1302
+    1303
   ],
   [
     logoInstagram,
     'https://www.instagram.com/devsnorte/',
     'DevsNorte Instagram',
-    797
+    820
   ],
   [
     logoYoutube,
     'https://youtube.com/c/DevsNorte',
     'DevsNorte YouTube',
-    641
+    645
   ],
   [
     logoTelegram,
     'https://t.me/devsnorte',
     'DevsNorte Telegram',
-    425
+    426
   ],
   [
     logoTwitter,
     'https://www.twitter.com/devsnorte/',
     'DevsNorte Twitter',
-    228
+    245
   ],
 ]
 
