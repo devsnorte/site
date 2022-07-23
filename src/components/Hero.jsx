@@ -18,19 +18,19 @@ const social = [
     logoLinkedin,
     'https://www.linkedin.com/company/devsnorte',
     'DevsNorte LinkedIn',
-    1278
+    1302
   ],
   [
     logoInstagram,
     'https://www.instagram.com/devsnorte/',
     'DevsNorte Instagram',
-    793
+    797
   ],
   [
     logoYoutube,
     'https://youtube.com/c/DevsNorte',
     'DevsNorte YouTube',
-    637
+    641
   ],
   [
     logoTelegram,
@@ -42,7 +42,7 @@ const social = [
     logoTwitter,
     'https://www.twitter.com/devsnorte/',
     'DevsNorte Twitter',
-    227
+    228
   ],
 ]
 
@@ -53,7 +53,7 @@ export function Hero() {
         <div className="absolute top-0 left-0 -translate-y-[10%] -translate-x-[55%] -scale-x-100 sm:left-1/2 sm:-translate-y-[6%] sm:-translate-x-[98%] lg:-translate-x-[106%] xl:-translate-x-[122%]">
           <Image
             src={backgroundImage}
-            alt=""
+            alt="background image"
             layout="fixed"
             width={918}
             height={1495}

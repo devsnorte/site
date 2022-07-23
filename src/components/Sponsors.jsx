@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-
 import { Container } from '@/components/Container'
+
 import logoAppsignal from '@/images/logos/appsignal.svg'
 import logoDevpleno from '@/images/logos/devpleno.svg'
 import logoJobsity from '@/images/logos/jobsity.svg'
 import logoIdopter from '@/images/logos/idopter.svg'
+import logoTruelogic from '@/images/logos/truelogic.svg'
 
 const sponsors = [
   {
@@ -29,7 +30,13 @@ const sponsors = [
     image: logoAppsignal,
     url: 'https://www.appsignal.com/'
   },
+  {
+    name: 'Truelogic',
+    image: logoTruelogic,
+    url: 'https://www.truelogic.io/'
+  },
 ]
+
 
 export function Sponsors() {
   return (
@@ -48,25 +55,21 @@ export function Sponsors() {
         <p className="mx-auto max-w-2xl text-center font-display text-xl tracking-tighter text-green-900">
           Estas são as empresas que apoiam a nossa comunidade
         </p>
-        <ul className="mt-20 flex flex-col items-center justify-center space-y-12 sm:flex-row sm:space-x-12 sm:space-y-0 md:flex-col md:space-x-0 md:space-y-12">
-          <li>
-            <ul className="flex flex-col items-center space-y-12 sm:space-y-12 md:flex-row md:space-y-0 md:space-x-16 lg:space-x-32">
-              {sponsors.map((sponsor) => (
-                <li className="flex" key={sponsor.name}>
-                  <Link href={sponsor.url}>
-                    <a target="_blank">
-                      <Image
-                        width={130}
-                        src={sponsor.image}
-                        alt={sponsor.name}
-                        layout="fixed"
-                      />
-                    </a>
-                  </Link>
-                </li>
-              )).sort((a, b) => a.name > b.name ? 1 : -1)}
-            </ul>
-          </li>
+        <ul className="mt-16 flex flex-col items-center justify-center space-y-10 md:flex-row md:flex-wrap md:space-y-0 md:space-x-10 xl:space-x-16">
+          {sponsors.sort((a, b) => a.name > b.name ? 1 : -1).map((sponsor) => (
+            <li className="flex md:my-3" key={sponsor.name}>
+              <Link href={sponsor.url}>
+                <a target="_blank">
+                  <Image
+                    width={150}
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    layout="fixed"
+                  />
+                </a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </Container>
     </section>
