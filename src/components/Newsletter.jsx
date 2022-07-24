@@ -76,7 +76,7 @@ export function Newsletter() {
                   value={variables.email}
                 ></input>
                 <Button type="submit" onClick={signin}>
-                  <span className="sr-only sm:not-sr-only">Assine</span>
+                  <span>Assine</span>
                 </Button>
               </div>
             </div>
