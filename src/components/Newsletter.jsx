@@ -1,9 +1,50 @@
-import Image from 'next/image'
-
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { useState } from 'react'
 
 export function Newsletter() {
+
+  const [variables, setVariables] = useState({
+    name: '',
+    email: '',
+    newsletter: '62a2004d6198800016770210'
+  })
+
+  const raw = JSON.stringify({
+    "query": "mutation createOneSubscriber($name: String!, $email: String!, $newsletter: String!) {createOneSubscriber(input: {name: $name, email: $email, newsletter: $newsletter}) {name __typename}}",
+    "operationName": "createOneSubscriber",
+    variables
+  })
+
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      "content-type": "application/json"
+    },
+    body: raw,
+    redirect: 'follow'
+  };
+
+  const signin = async () => {
+    try {
+      console.log(raw)
+      const response = await fetch('https://gstack-api-production.herokuapp.com/graphql', requestOptions)
+      response.text()
+
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const onChange = event => {
+    const value = event.target.value
+    const key = event.target.name
+    setVariables(old => ({
+      ...old,
+      [key]: value
+    }))
+  }
+
   return (
     <section id="newsletter" aria-labelledby="newsletter-title">
       <h2 id="newsletter-title" className="sr-only">
@@ -20,38 +61,25 @@ export function Newsletter() {
                 Na newsletter Devs Norte você ficará sabendo das novidades tecnológicas do mundo todo e estará por dentro de próximos eventos que acontecerão.
               </p>
             </div>
-            <form>
+            <div>
               <h3 className="text-lg font-semibold tracking-tight text-green-900">
                 Se inscreva <span aria-hidden="true">↓</span>
               </h3>
-              <div className="mt-5 flex rounded-3xl bg-white py-2.5 pr-2.5 shadow-xl shadow-green-900/5 focus-within:ring-2 focus-within:ring-green-900">
-                <label htmlFor="" className="sr-only">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  required
-                  placeholder="Email"
-                  className="-my-2.5 flex-auto bg-transparent pl-6 pr-2.5 text-base text-slate-900 placeholder:text-slate-400 focus:outline-none"
-                />
-                <Button type="submit">
+
+              <div className="mt-5">
+                <input type="text" id="name" name="name" placeholder="Nome" className="w-full bg-white rounded-lg border focus:ring-2 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out border-gray-300 focus:border-green-500 focus:ring-green-200 mb-6"
+                  onChange={onChange}
+                  value={variables.name}
+                ></input>
+                <input type="text" id="email" name="email" placeholder="Email" className="w-full bg-white rounded-lg border focus:ring-2 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out border-gray-300 focus:border-green-500 focus:ring-green-200 mb-6"
+                  onChange={onChange}
+                  value={variables.email}
+                ></input>
+                <Button type="submit" onClick={signin}>
                   <span className="sr-only sm:not-sr-only">Assine</span>
-                  <svg
-                    aria-hidden="true"
-                    className="h-6 w-6 sm:hidden"
-                    fill="none"
-                  >
-                    <path
-                      d="m14 7 5 5-5 5M19 12H5"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
                 </Button>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </Container>

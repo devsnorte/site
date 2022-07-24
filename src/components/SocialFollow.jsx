@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import formatNumber from '@/utils/NumberFormatter'
 
 export function SocialFollow({ social, ...props }) {
     return (
@@ -15,7 +16,7 @@ export function SocialFollow({ social, ...props }) {
                   alt={alt}
                   layout="fixed"
                 />
-                { count ? <span className="px-2 ml-1 text-sm text-black bg-white rounded">{ count }</span> : '' }
+                { count ? <span className="px-2 ml-1 text-sm text-black bg-white rounded">{ formatNumber(count) }</span> : '' }
               </a>
             </Link>
           ))}
