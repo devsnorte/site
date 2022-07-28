@@ -13,30 +13,29 @@ const sponsors = [
   {
     name: 'Devpleno',
     image: logoDevpleno,
-    url: 'https://devpleno.com/'
+    url: 'https://devpleno.com/',
   },
   {
     name: 'Idopter Labs',
     image: logoIdopter,
-    url: 'https://www.idopterlabs.com.br/'
+    url: 'https://www.idopterlabs.com.br/',
   },
   {
     name: 'Jobsity',
     image: logoJobsity,
-    url: 'https://www.jobsity.com/'
+    url: 'https://www.jobsity.com/',
   },
   {
     name: 'AppSignal',
     image: logoAppsignal,
-    url: 'https://www.appsignal.com/'
+    url: 'https://www.appsignal.com/',
   },
   {
     name: 'Truelogic',
     image: logoTruelogic,
-    url: 'https://www.truelogic.io/'
+    url: 'https://www.truelogic.io/',
   },
 ]
-
 
 export function Sponsors() {
   return (
@@ -56,20 +55,27 @@ export function Sponsors() {
           Estas são as empresas que apoiam a nossa comunidade
         </p>
         <ul className="mt-16 flex flex-col items-center justify-center space-y-10 md:flex-row md:flex-wrap md:space-y-0 md:space-x-10 xl:space-x-16">
-          {sponsors.sort((a, b) => a.name > b.name ? 1 : -1).map((sponsor) => (
-            <li className="flex md:my-3" key={sponsor.name}>
-              <Link href={sponsor.url}>
-                <a target="_blank">
-                  <Image
-                    width={150}
-                    src={sponsor.image}
-                    alt={sponsor.name}
-                    layout="fixed"
-                  />
-                </a>
-              </Link>
-            </li>
-          ))}
+          {sponsors
+            .sort((a, b) => (a.name > b.name ? 1 : -1))
+            .map((sponsor, index) => (
+              <li
+                className="flex md:my-3"
+                key={sponsor.name}
+                data-aos="fade-up"
+                data-aos-delay={100 * index}
+              >
+                <Link href={sponsor.url}>
+                  <a target="_blank">
+                    <Image
+                      width={150}
+                      src={sponsor.image}
+                      alt={sponsor.name}
+                      layout="fixed"
+                    />
+                  </a>
+                </Link>
+              </li>
+            ))}
         </ul>
       </Container>
     </section>
