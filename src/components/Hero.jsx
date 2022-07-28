@@ -12,38 +12,22 @@ import logoTwitter from '@/images/icons/twitter.svg'
 import logoTelegram from '@/images/icons/telegram.svg'
 import logoInstagram from '@/images/icons/instagram.svg'
 
-
 const social = [
   [
     logoLinkedin,
     'https://www.linkedin.com/company/devsnorte',
     'DevsNorte LinkedIn',
-    1303
+    1303,
   ],
   [
     logoInstagram,
     'https://www.instagram.com/devsnorte/',
     'DevsNorte Instagram',
-    820
+    820,
   ],
-  [
-    logoYoutube,
-    'https://youtube.com/c/DevsNorte',
-    'DevsNorte YouTube',
-    645
-  ],
-  [
-    logoTelegram,
-    'https://t.me/devsnorte',
-    'DevsNorte Telegram',
-    426
-  ],
-  [
-    logoTwitter,
-    'https://www.twitter.com/devsnorte/',
-    'DevsNorte Twitter',
-    245
-  ],
+  [logoYoutube, 'https://youtube.com/c/DevsNorte', 'DevsNorte YouTube', 645],
+  [logoTelegram, 'https://t.me/devsnorte', 'DevsNorte Telegram', 426],
+  [logoTwitter, 'https://www.twitter.com/devsnorte/', 'DevsNorte Twitter', 245],
 ]
 
 export function Hero() {
@@ -66,25 +50,41 @@ export function Hero() {
       </div>
       <Container className="relative">
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
-          <h1 className="font-display text-5xl font-bold tracking-tighter text-green-500 sm:text-7xl">
-            <span className="sr-only">DevsNorte - </span>A maior comunidade do norte do Brasil.
+          <h1
+            className="font-display text-5xl font-bold tracking-tighter text-green-500 sm:text-7xl"
+            data-aos="zoom-in-up"
+          >
+            <span className="sr-only">DevsNorte - </span>A maior comunidade do
+            norte do Brasil.
           </h1>
-          <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-green-900">
+          <div
+            className="mt-6 space-y-6 font-display text-2xl tracking-tight text-green-900"
+            data-aos="fade-up"
+          >
             <p>
-              Comunidade de tecnologia que realiza encontros presenciais e online para divulgação de novas tecnologias, padrões de projetos, startups, e todo tipo de inovação no mundo de TI.
+              Comunidade de tecnologia que realiza encontros presenciais e
+              online para divulgação de novas tecnologias, padrões de projetos,
+              startups, e todo tipo de inovação no mundo de TI.
             </p>
             <p>
-              Reunimos pessoas desenvolvedoras e interessadas na área para auxiliar no crescimento profissional, conectar com as iniciativas e projetos de tecnologia que acontecem na região, no país e no mundo.
+              Reunimos pessoas desenvolvedoras e interessadas na área para
+              auxiliar no crescimento profissional, conectar com as iniciativas
+              e projetos de tecnologia que acontecem na região, no país e no
+              mundo.
             </p>
           </div>
-          <ButtonLink href="https://www.sympla.com.br/produtor/devsnorte" className="mt-10 w-full sm:hidden">
+          <ButtonLink
+            href="https://www.sympla.com.br/produtor/devsnorte"
+            className="mt-10 w-full sm:hidden"
+          >
             Fique por dentro dos Eventos
           </ButtonLink>
-          <div className="pt-12 text-xl text-center text-green-900 font-light">
-            <p>
-              Faça parte da nossa comunidade!
-            </p>
-            <SocialFollow social={social} className="pt-8 flex flex-col col-span-2 items-center justify-center space-y-6 md:flex-row md:space-y-0 md:space-x-4"></SocialFollow>
+          <div className="pt-12 text-center text-xl font-light text-green-900">
+            <p>Faça parte da nossa comunidade!</p>
+            <SocialFollow
+              social={social}
+              className="col-span-2 flex flex-col items-center justify-center space-y-6 pt-8 md:flex-row md:space-y-0 md:space-x-4"
+            ></SocialFollow>
           </div>
         </div>
       </Container>
