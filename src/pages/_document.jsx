@@ -25,7 +25,7 @@ export default function Document() {
           property="og:description"
           content="Comunidade de tecnologia que realiza encontros presenciais e online para divulgação de novas tecnologias, padrões de projetos, startups, e todo tipo de inovação no mundo de TI."
         />
-        <meta property="og:image" content="images/devs_norte.png" />
+        <meta property="og:image" content="devs_norte.png" />
       </Head>
       <body>
         <Main />
