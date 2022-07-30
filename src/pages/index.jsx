@@ -7,6 +7,7 @@ import { Newsletter } from '@/components/Newsletter'
 // import { Schedule } from '@/components/Schedule'
 // import { Speakers } from '@/components/Speakers'
 import { Sponsors } from '@/components/Sponsors'
+import { ToastContainer } from 'react-toastify'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
+        <ToastContainer />
         <Hero />
         <Sponsors />
         <Newsletter />
