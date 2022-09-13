@@ -70,7 +70,7 @@ export function Sponsors() {
                       width={150}
                       src={sponsor.image}
                       alt={sponsor.name}
-                      layout="fixed"
+                      objectFit="contain"
                     />
                   </a>
                 </Link>
