@@ -8,6 +8,7 @@ import logoDevpleno from '@/images/logos/devpleno.svg'
 import logoJobsity from '@/images/logos/jobsity.svg'
 import logoIdopter from '@/images/logos/idopter.svg'
 import logoTruelogic from '@/images/logos/truelogic.svg'
+import logoConta49 from '@/images/logos/conta49.svg'
 
 const sponsors = [
   {
@@ -34,6 +35,11 @@ const sponsors = [
     name: 'Truelogic',
     image: logoTruelogic,
     url: 'https://www.truelogic.io/',
+  },
+  {
+    name: 'Conta49',
+    image: logoConta49,
+    url: 'https://conta49.com.br/',
   },
 ]
 
