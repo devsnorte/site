@@ -5,7 +5,6 @@ import { Container } from '@/components/Container'
 
 import logoAppsignal from '@/images/logos/appsignal.svg'
 import logoDevpleno from '@/images/logos/devpleno.svg'
-import logoJobsity from '@/images/logos/jobsity.svg'
 import logoIdopter from '@/images/logos/idopter.svg'
 import logoTruelogic from '@/images/logos/truelogic.svg'
 import logoConta49 from '@/images/logos/conta49.svg'
@@ -20,11 +19,6 @@ const sponsors = [
     name: 'Idopter Labs',
     image: logoIdopter,
     url: 'https://www.idopterlabs.com.br/',
-  },
-  {
-    name: 'Jobsity',
-    image: logoJobsity,
-    url: 'https://www.jobsity.com/',
   },
   {
     name: 'AppSignal',
