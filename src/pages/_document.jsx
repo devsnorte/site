@@ -5,6 +5,7 @@ export default function Document() {
     <Html className="bg-white antialiased" lang="pt-BR">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="icon" href="favicon.ico"/>
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
