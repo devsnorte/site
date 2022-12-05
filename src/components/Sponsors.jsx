@@ -6,7 +6,6 @@ import { Container } from '@/components/Container'
 import logoAppsignal from '@/images/logos/appsignal.svg'
 import logoDevpleno from '@/images/logos/devpleno.svg'
 import logoIdopter from '@/images/logos/idopter.svg'
-import logoTruelogic from '@/images/logos/truelogic.svg'
 import logoConta49 from '@/images/logos/conta49.svg'
 import logoCompass from '@/images/logos/compass.svg'
 
@@ -25,11 +24,6 @@ const sponsors = [
     name: 'AppSignal',
     image: logoAppsignal,
     url: 'https://www.appsignal.com/',
-  },
-  {
-    name: 'Truelogic',
-    image: logoTruelogic,
-    url: 'https://www.truelogic.io/',
   },
   {
     name: 'Conta49',
