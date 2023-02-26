@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 
-import logoAmazoniaOnline from '@/images/logos/amazoniaonline.svg'
+import logoAmazoniaOnline from '@/images/logos/amazoniaonline.png'
 import logoAppsignal from '@/images/logos/appsignal.svg'
 import logoDevpleno from '@/images/logos/devpleno.svg'
 import logoIdopter from '@/images/logos/idopter.svg'
@@ -73,7 +73,7 @@ export function Sponsors() {
                 <Link href={sponsor.url}>
                   <a target="_blank">
                     <Image
-                      width={150}
+                      width={120}
                       src={sponsor.image}
                       alt={sponsor.name}
                       objectFit="contain"
