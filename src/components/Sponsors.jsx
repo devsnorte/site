@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 
+import logoAmazoniaOnline from '@/images/logos/amazoniaonline.svg'
 import logoAppsignal from '@/images/logos/appsignal.svg'
 import logoDevpleno from '@/images/logos/devpleno.svg'
 import logoIdopter from '@/images/logos/idopter.svg'
@@ -34,6 +35,11 @@ const sponsors = [
     name: 'Compass.UOL',
     image: logoCompass,
     url: 'https://compass.uol/',
+  },
+  {
+    name: 'Amazônia Online',
+    image: logoAmazoniaOnline,
+    url: 'https://amazoniaonline.com.br/',
   },
 ]
 

@@ -62,15 +62,10 @@ export function Hero() {
             data-aos="fade-up"
           >
             <p>
-              Comunidade de tecnologia que realiza encontros presenciais e
-              online para divulgação de novas tecnologias, padrões de projetos,
-              startups, e todo tipo de inovação no mundo de TI.
+              Comunidade de tecnologia para área de desenvolvimento, com foco em promover o compartilhamento de conhecimento, a colaboração e o networking entre seus membros.
             </p>
             <p>
-              Reunimos pessoas desenvolvedoras e interessadas na área para
-              auxiliar no crescimento profissional, conectar com as iniciativas
-              e projetos de tecnologia que acontecem na região, no país e no
-              mundo.
+              Reunimos profissionais, estudantes da área de tecnologia da informação e outros profissionais relacionados, realizando eventos, palestras, workshops e outras atividades para promover a educação continuada e o desenvolvimento profissional das pessoas. Além disso, a comunidade também é um espaço para a troca de ideias e experiências, bem como para o fortalecimento da comunidade tecnológica na região Norte do Brasil.
             </p>
           </div>
           <ButtonLink
