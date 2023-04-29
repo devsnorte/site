@@ -7,6 +7,7 @@ import logoAmazoniaOnline from '@/images/logos/amazoniaonline.png'
 import logoAppsignal from '@/images/logos/appsignal.svg'
 import logoDevpleno from '@/images/logos/devpleno.svg'
 import logoIdopter from '@/images/logos/idopter.svg'
+import logoJetbrains from '@/images/logos/jetbrains.svg'
 import logoConta49 from '@/images/logos/conta49.svg'
 import logoCompass from '@/images/logos/compass.svg'
 
@@ -20,6 +21,11 @@ const sponsors = [
     name: 'Idopter Labs',
     image: logoIdopter,
     url: 'https://www.idopterlabs.com.br/',
+  },
+  {
+    name: 'Jetbrains',
+    image: logoJetbrains,
+    url: 'https://www.jetbrains.com/',
   },
   {
     name: 'AppSignal',
@@ -51,7 +57,7 @@ export function Sponsors() {
       className="py-20 sm:py-32"
     >
       <h2 id="sponsors-title" className="sr-only">
-        Patrocinadores
+        Apoio
       </h2>
       <Container>
         <p className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-green-900 sm:text-5xl">
