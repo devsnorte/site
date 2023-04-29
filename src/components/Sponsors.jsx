@@ -61,7 +61,7 @@ export function Sponsors() {
       </h2>
       <Container>
         <p className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-green-900 sm:text-5xl">
-          Patrocinadores
+          Apoio
         </p>
         <p className="mx-auto max-w-2xl text-center font-display text-xl tracking-tighter text-green-900">
           Estas são as empresas que apoiam a nossa comunidade
