@@ -17,17 +17,17 @@ const social = [
     logoLinkedin,
     'https://www.linkedin.com/company/devsnorte',
     'DevsNorte LinkedIn',
-    1629,
+    2361,
   ],
   [
     logoInstagram,
     'https://www.instagram.com/devsnorte/',
     'DevsNorte Instagram',
-    1093,
+    1953,
   ],
-  [logoYoutube, 'https://youtube.com/c/DevsNorte', 'DevsNorte YouTube', 694],
-  [logoTelegram, 'https://t.me/devsnorte', 'DevsNorte Telegram', 525],
-  [logoTwitter, 'https://www.twitter.com/devsnorte/', 'DevsNorte Twitter', 288],
+  [logoYoutube, 'https://youtube.com/c/DevsNorte', 'DevsNorte YouTube', 837],
+  [logoTelegram, 'https://t.me/devsnorte', 'DevsNorte Telegram', 727],
+  [logoTwitter, 'https://www.twitter.com/devsnorte/', 'DevsNorte Twitter', 362],
 ]
 
 export function Hero() {
