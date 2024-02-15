@@ -10,7 +10,7 @@ export function Button({ className, ...props }) {
 
 export function ButtonLink({ href, className, ...props }) {
   return (
-    <Link href={href}>
+    <Link legacyBehavior href={href}>
       <a className={clsx(styles, className)} {...props} />
     </Link>
   )

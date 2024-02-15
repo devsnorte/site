@@ -2,8 +2,11 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { useState } from 'react'
 import { toast } from 'react-toastify'
+import { useTranslation } from 'next-i18next'
 
 export function Newsletter() {
+  const { t } = useTranslation()
+
   const [variables, setVariables] = useState({
     name: '',
     email: '',
@@ -59,24 +62,22 @@ export function Newsletter() {
           <div className="relative mx-auto grid max-w-2xl grid-cols-1 gap-x-32 gap-y-14 xl:max-w-none xl:grid-cols-2">
             <div>
               <p className="font-display text-4xl font-medium tracking-tighter text-green-900 sm:text-5xl">
-                Fique por dentro das novidades.
+                {t('newsletterTitle')}
               </p>
               <p className="mt-4 text-lg tracking-tight text-green-900">
-                Na newsletter Devs Norte você ficará sabendo das novidades
-                tecnológicas do mundo todo e estará por dentro de próximos
-                eventos que acontecerão.
+                {t('newsletterDescription')}
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold tracking-tight text-green-900">
-                Se inscreva <span aria-hidden="true">↓</span>
+                {t('subscribe')} <span aria-hidden="true">↓</span>
               </h3>
 
               <div className="mt-5">
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name={t('name')}
                   placeholder="Nome"
                   className="mb-6 w-full rounded-lg border border-gray-300 bg-white py-2 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-green-500 focus:ring-2 focus:ring-green-200"
                   onChange={onChange}
@@ -85,14 +86,14 @@ export function Newsletter() {
                 <input
                   type="text"
                   id="email"
-                  name="email"
+                  name={t('email')}
                   placeholder="Email"
                   className="mb-6 w-full rounded-lg border border-gray-300 bg-white py-2 px-3 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-green-500 focus:ring-2 focus:ring-green-200"
                   onChange={onChange}
                   value={variables.email}
                 ></input>
                 <Button type="submit" onClick={signin}>
-                  <span>Assine</span>
+                  <span>{t('subscribe')}</span>
                 </Button>
               </div>
             </div>
