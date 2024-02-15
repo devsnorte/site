@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
@@ -8,8 +7,9 @@ import { Newsletter } from '@/components/Newsletter'
 // import { Speakers } from '@/components/Speakers'
 import { Sponsors } from '@/components/Sponsors'
 import { ToastContainer } from 'react-toastify'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-export default function Home() {
+function Home() {
   return (
     <>
       <Head>
@@ -30,3 +30,11 @@ export default function Home() {
     </>
   )
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? 'pt', ['common'])),
+  },
+})
+
+export default Home
