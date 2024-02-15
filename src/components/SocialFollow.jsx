@@ -7,7 +7,7 @@ export function SocialFollow({ social, ...props }) {
     <div>
       <div {...props}>
         {social.map(([img, url, alt, count], index) => (
-          <Link key={alt} href={url}>
+          <Link legacyBehavior key={alt} href={url}>
             <a
               target="_blank"
               className="inline-flex justify-center rounded-lg bg-gray-300 p-2"

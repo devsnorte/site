@@ -11,6 +11,7 @@ import logoLinkedin from '@/images/icons/linkedin.svg'
 import logoTwitter from '@/images/icons/twitter.svg'
 import logoTelegram from '@/images/icons/telegram.svg'
 import logoInstagram from '@/images/icons/instagram.svg'
+import { useTranslation } from 'next-i18next'
 
 const social = [
   [
@@ -31,6 +32,7 @@ const social = [
 ]
 
 export function Hero() {
+  const { t } = useTranslation()
   return (
     <div className="relative py-10 sm:py-14">
       <div className="absolute -inset-x-0 -top-48 -bottom-14 overflow-hidden bg-indigo-50">
@@ -54,28 +56,24 @@ export function Hero() {
             className="font-display text-5xl font-bold tracking-tighter text-green-500 sm:text-7xl"
             data-aos="zoom-in-up"
           >
-            <span className="sr-only">DevsNorte - </span>A maior comunidade do
-            norte do Brasil.
+            <span className="sr-only">DevsNorte - </span>
+            {t('bannerTitle')}
           </h1>
           <div
             className="mt-6 space-y-6 font-display text-2xl tracking-tight text-green-900"
             data-aos="fade-up"
           >
-            <p>
-              Comunidade de tecnologia para área de desenvolvimento, com foco em promover o compartilhamento de conhecimento, a colaboração e o networking entre seus membros.
-            </p>
-            <p>
-              Reunimos profissionais, estudantes da área de tecnologia da informação e outros profissionais relacionados, realizando eventos, palestras, workshops e outras atividades para promover a educação continuada e o desenvolvimento profissional das pessoas. Além disso, a comunidade também é um espaço para a troca de ideias e experiências, bem como para o fortalecimento da comunidade tecnológica na região Norte do Brasil.
-            </p>
+            <p>{t('bannerDescriptionOne')}</p>
+            <p>{t('bannerDescriptionTwo')}</p>
           </div>
           <ButtonLink
             href="https://www.sympla.com.br/produtor/devsnorte"
             className="mt-10 w-full sm:hidden"
           >
-            Fique por dentro dos Eventos
+            {t('eventsButton')}
           </ButtonLink>
           <div className="pt-12 text-center text-xl font-light text-green-900">
-            <p>Faça parte da nossa comunidade!</p>
+            <p>{t('joinOurCommunity')}</p>
             <SocialFollow
               social={social}
               className="col-span-2 flex flex-col items-center justify-center space-y-6 pt-8 md:flex-row md:space-y-0 md:space-x-4"

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
+import { useTranslation } from 'next-i18next'
 
 import logoAmazoniaOnline from '@/images/logos/amazoniaonline.png'
 import logoAppsignal from '@/images/logos/appsignal.svg'
@@ -50,6 +51,7 @@ const sponsors = [
 ]
 
 export function Sponsors() {
+  const { t } = useTranslation()
   return (
     <section
       id="sponsors"
@@ -57,14 +59,14 @@ export function Sponsors() {
       className="py-20 sm:py-32"
     >
       <h2 id="sponsors-title" className="sr-only">
-        Apoio
+        {t('support')}
       </h2>
       <Container>
         <p className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-green-900 sm:text-5xl">
-          Apoio
+          {t('support')}
         </p>
         <p className="mx-auto max-w-2xl text-center font-display text-xl tracking-tighter text-green-900">
-          Estas são as empresas que apoiam a nossa comunidade
+          {t('supportDescription')}
         </p>
         <ul className="mt-16 flex flex-col items-center justify-center space-y-10 md:flex-row md:flex-wrap md:space-y-0 md:space-x-10 xl:space-x-16">
           {sponsors
@@ -76,7 +78,7 @@ export function Sponsors() {
                 data-aos="fade-up"
                 data-aos-delay={100 * index}
               >
-                <Link href={sponsor.url}>
+                <Link legacyBehavior href={sponsor.url}>
                   <a target="_blank">
                     <Image
                       width={120}
